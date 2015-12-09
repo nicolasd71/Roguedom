@@ -10,6 +10,7 @@ namespace Test_Rogue
     {
         /// <summary>
         /// Lolilol
+        /// lol nope
         /// </summary>
         /// <param name="val"></param>
         /// <param name="min"></param>
