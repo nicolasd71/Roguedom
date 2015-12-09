@@ -18,7 +18,7 @@ namespace Test_Rogue
             this.position = pos;
             ConsoleHelper.WriteChar(MONSTERCHAR, position.x, position.y, ConsoleColor.Red);
 
-            this.strength = Mathf.Clamp((int)Math.Floor(level * 0.5 * (rng.NextDouble() * 10)), 1, level * 5);
+            this.strength = Mathf.Clamp((int)Math.Floor(level * 0.5 * (rng.NextDouble() * 10)), 1, level * 5); // Change these to use the new Mathf.Random(), it will be overrall better.
             this.agility = Mathf.Clamp((int)Math.Floor(level * 2 * (rng.NextDouble() * 10)), 1, level * 5);
             this.life = (int)Math.Round(strength * level * 1.25);
         }

@@ -6,7 +6,7 @@ namespace Test_Rogue
 {
     static class Player
     {
-        private const char PLAYERCHAR = '@';
+        private const char PLAYERCHAR = (char)1; // Replaced it with smiley, hehehehe.
         public static Point position;
 
         public static int life = 10;
