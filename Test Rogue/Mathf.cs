@@ -8,6 +8,13 @@ namespace Test_Rogue
 {
     static class Mathf
     {
+        /// <summary>
+        /// Lolilol
+        /// </summary>
+        /// <param name="val"></param>
+        /// <param name="min"></param>
+        /// <param name="max"></param>
+        /// <returns></returns>
         public static int Clamp(int val, int min, int max)
         {
             if (val < min)
