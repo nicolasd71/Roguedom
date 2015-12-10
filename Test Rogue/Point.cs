@@ -25,11 +25,6 @@ namespace Test_Rogue
             this.y = y;
         }
 
-        public override string ToString()
-        {
-            return string.Format("[{0}-{1}]", x, y);
-        }
-
         public static int Distance(Point p1, Point p2)
         {
             return (int)Math.Round(Math.Sqrt(Math.Pow(p1.x - p2.x, 2) + Math.Pow(p1.y - p2.y, 2)));
@@ -45,6 +40,16 @@ namespace Test_Rogue
             return new Point(p1.x - p2.x, p1.y - p2.y);
         }
 
+        public static Point operator *(Point p1, Point p2)
+        {
+            return new Point(p1.x - p2.x, p1.y - p2.y);
+        }
+
+        public static Point operator /(Point p1, Point p2)
+        {
+            return new Point(p1.x / p2.x, p1.y / p2.y);
+        }
+
         public static bool operator ==(Point p1, Point p2)
         {
             return (p1.x == p2.x && p1.y == p2.y);
@@ -53,6 +58,21 @@ namespace Test_Rogue
         public static bool operator !=(Point p1, Point p2)
         {
             return (p1.x != p2.x || p1.y != p2.y);
+        }
+
+        public override string ToString()
+        {
+            return string.Format("[{0}-{1}]", x, y);
+        }
+
+        public override bool Equals(object obj) // Do these two overrides so that it doesn't throw useless warnings.
+        {
+            return base.Equals(obj);
+        }
+
+        public override int GetHashCode() // This too.
+        {
+            return base.GetHashCode();
         }
     }
 }

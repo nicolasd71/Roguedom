@@ -1,20 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Test_Rogue
 {
     static class Mathf
     {
-        /// <summary>
-        /// Lolilol
-        /// </summary>
-        /// <param name="val"></param>
-        /// <param name="min"></param>
-        /// <param name="max"></param>
-        /// <returns></returns>
+        private static Random _rnd = new Random();
+
         public static int Clamp(int val, int min, int max)
         {
             if (val < min)
@@ -22,6 +13,11 @@ namespace Test_Rogue
             else if (val > max)
                 return max;
             return val;
+        }
+
+        public static float Random(float minimum, float maximum) // Yay random floats without hassle!
+        {
+            return (float)(_rnd.NextDouble() * (maximum - minimum) + minimum);
         }
     }
 }
